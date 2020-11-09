@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
+import org.apache.commons.text.StringEscapeUtils;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -51,9 +52,11 @@ public class RecipeDeserializer extends StdDeserializer<Recipe> {
         if(instructions.isArray()) {
             StringBuilder stringBuilder = new StringBuilder();
             instructions.elements().forEachRemaining(jsonNode -> stringBuilder.append(jsonNode.asText()));
-            builder.recipeInstructions(stringBuilder.toString());
+            String unescaped = StringEscapeUtils.unescapeHtml4(stringBuilder.toString());
+            builder.recipeInstructions(unescaped);
         }else if(instructions.isTextual()) {
-            builder.recipeInstructions(instructions.asText());
+            String unescaped = StringEscapeUtils.unescapeHtml4(instructions.asText());
+            builder.recipeInstructions(unescaped);
         }
 
         builder.description(getIfExists(node, "description"));
