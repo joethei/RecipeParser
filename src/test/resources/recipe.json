@@ -1,0 +1,69 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Recipe",
+  "image": "https://example.com/image.png",
+  "recipeCategory": "Pasta & Nudel",
+  "recipeIngredient": [
+    "300 g Spaghetti",
+    "40 g Butter",
+    "400 g passierte Tomaten"
+  ],
+  "name": "Tomatenspaghetti",
+  "description": "Tomatenspaghetti ",
+  "recipeInstructions": "Die Nudeln kochen.",
+  "author": {
+    "@type": "Person",
+    "name": "Testing"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nobody"
+  },
+  "datePublished": "2009-04-09",
+  "prepTime": "P0DT0H15M",
+  "totalTime": "P0DT0H15M",
+  "recipeYield": "4 Portion(en)",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingCount": 7,
+    "ratingValue": 4.22,
+    "reviewCount": 6,
+    "worstRating": 0,
+    "bestRating": 5
+  },
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "servingSize": "1",
+    "calories": "603 kcal",
+    "proteinContent": "17,20g",
+    "fatContent": "29,86g",
+    "carbohydrateContent": "66,12g"
+  },
+  "keywords": [
+    "Hauptspeise",
+    "Nudeln",
+    "Pasta",
+    "Vegetarisch"
+  ],
+  "reviews": [
+    {
+      "@type": "Review",
+      "reviewBody": "Hello World",
+      "datePublished": "2019-11-27",
+      "author": {
+        "@type": "Person",
+        "name": "TestUser"
+      }
+    },
+    {
+      "@type": "Review",
+      "reviewBody": "Nice",
+      "datePublished": "2018-08-30",
+      "author": {
+        "@type": "Person",
+        "name": "user"
+      }
+    }
+  ]
+}
+

@@ -13,6 +13,8 @@ import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,6 +36,11 @@ public class RecipeParser {
             return parseContent(data);
 
         return null;
+    }
+
+    @Nullable
+    public static Recipe parse(@NotNull final Path path) throws IOException {
+        return parseContent(Files.readString(path));
     }
 
 
