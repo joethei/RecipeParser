@@ -10,7 +10,7 @@
 
     <groupId>xyz.joethei</groupId>
     <artifactId>recipe-parser</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -173,6 +173,12 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-text</artifactId>
             <version>1.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.sisyphsu</groupId>
+            <artifactId>dateparser</artifactId>
+            <version>1.0.7</version>
         </dependency>
 
 

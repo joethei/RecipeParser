@@ -4,16 +4,17 @@
 
 package xyz.joethei.recipe;
 
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.util.Optional;
+
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
+import com.github.sisyphsu.dateparser.DateParserUtils;
 import org.apache.commons.text.StringEscapeUtils;
-
-import java.io.IOException;
-import java.time.LocalDate;
-import java.util.Optional;
 
 /**
  * @author Johannes Theiner
@@ -21,6 +22,8 @@ import java.util.Optional;
  * @since 2020-09-29
  **/
 public class RecipeDeserializer extends StdDeserializer<Recipe> {
+
+    private static final long serialVersionUID = -7183438859870030590L;
 
     public RecipeDeserializer() {
         this(null);
@@ -68,7 +71,7 @@ public class RecipeDeserializer extends StdDeserializer<Recipe> {
         if (node.get("datePublished") != null) {
             var date = getIfExists(node, "datePublished");
             date.ifPresent(s -> {
-                var localDate = LocalDate.parse(s);
+                LocalDateTime localDate = DateParserUtils.parseDateTime(s);
                 builder.datePublished(localDate);
             });
         }

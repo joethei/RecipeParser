@@ -10,6 +10,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.immutables.value.Value;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -39,7 +40,7 @@ public interface Recipe {
 
     String recipeInstructions();
 
-    Optional<LocalDate> datePublished();
+    Optional<LocalDateTime> datePublished();
 
     List<String> recipeIngredient();
 

@@ -1,0 +1,43 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Recipe",
+  "name": "Tomatensuppe",
+  "author": {
+    "@type": "Person",
+    "name": "Mustermann"
+  },
+  "image": "https://example.com/image.png",
+  "datePublished": "2017-07-10T09:09:10+02:00",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "3.47902",
+    "reviewCount": "42"
+  },
+  "prepTime": "PT10M",
+  "totalTime": "PT25M",
+  "recipeYield": "4 servings",
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "servingSize": "1 bowl"
+  },
+  "recipeIngredient": [
+    "80 g Zwiebel",
+    "600 g Tomate",
+    "4 EL Oliven\u00f6l",
+    "2 EL Tomatenmark",
+    "20 g Mehl",
+    "60 ml Fleischbr\u00fche",
+    "8 Stk. Pfefferkorn",
+    "1 Lorbeerblatt",
+    "1 EL Zucker",
+    "1 EL Zitronensaft",
+    " etwas Salz",
+    "60 ml Gem\u00fcsebr\u00fche",
+    "100 ml Sahne"
+  ],
+  "recipeInstructions": [
+    "1. Zwiebeln sch\u00e4len und fein w\u00fcrfelig schneiden. Tomaten waschen, Strunk entfernen und w\u00fcrfelig schneiden.\r\n",
+    "2. \u00d6l in einem Suppentopf erhitzen. Zwiebeln darin glasig schwitzen. Mehl hinzuf\u00fcgen und kurz mitr\u00f6sten. Tomaten und \u2013Mark unterr\u00fchren. Mit Br\u00fche aufgie\u00dfen und Gew\u00fcrze hinzuf\u00fcge.\r\n",
+    "3. Etwa 30 Minuten k\u00f6cheln lassen. Suppe durch ein Sieb streichen. Nochmals kurz aufkochen und mit Sahne verfeinern und nochmals aufmixen.\r\n"
+  ]
+}
